@@ -1,0 +1,38 @@
+{% load static %}
+{% block style %}
+<link href="{% static 'blog/css/style_toppings.css' %}" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+{% endblock style %}
+
+{% block navbar %}
+<header class="masthead">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class=" col-md-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to Landscape Inc.! </h3>
+          <p class="text-light">We Cut The Grass While You're On Your Ass &nbsp
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock navbar %}
+
+{% block sidenote %}
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+  <div class="card my-4">
+    <h5 class="card-header">About Us</h5>
+    <div class="card-body">
+      <p class="card-text"> We are a small, local landscaping business.</p>
+      <a href="#"
+        class="btn btn-danger">Really?? Fascinating..</a>
+    </div>
+  </div>
+</div>
+
+{% endblock sidenote %}
