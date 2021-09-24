@@ -1,17 +1,17 @@
 from django.db import models
-from django.contrib.auth.models import User
 
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
 )
 
-class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete= models.CASCADE, related_name='blog_posts')
-    updated_on = models.DateTimeField(auto_now=True)
-    content = models.TextField()
+class Portfolio(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    # To use if the images are already on the local machine, don't think it'll work for site owner
+    # adding new files themselves
+    # image = models.FilePathField(path="/img")
+    drawing = models.ImageField(upload_to='images/')
     pub_date = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
@@ -19,4 +19,4 @@ class Post(models.Model):
         ordering = ['-pub_date']
 
     def __str__(self):
-        return f'{self.title}, {self.content}'
+        return self.title

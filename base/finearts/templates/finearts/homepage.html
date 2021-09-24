@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Django Image Uploading</h1>
+<ul>
+  {% for portfolio in pics_list %}
+    <h2>{{ portfolio.title }}</h2>
+    <img src="{{ portfolio.drawing.url }}" alt="{{ portfolio.title }}">
+  {% endfor %}
+</ul>
+{% endblock %}
