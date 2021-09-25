@@ -5,8 +5,26 @@
 <h1>Django Image Uploading</h1>
 <ul>
   {% for portfolio in pics_list %}
-    <h2>{{ portfolio.title }}</h2>
-    <img src="{{ portfolio.drawing.url }}" alt="{{ portfolio.title }}">
+    
   {% endfor %}
 </ul>
 {% endblock %}
+
+<div class="col-md-4">
+  <div class="card mb-2">
+																						<!--Changed from portfolio.drawing.url-->
+		<img class="card-img-top" src="{% static portfolio.drawing %}">
+			<div class="card-body">
+				<h5 class="card-title">{{ portfolio.title }}</h5>
+				<p class="card-text">{{ project.description }}</p>
+				<a href="{% url 'project_detail' project.pk %}"
+					class="btn btn-primary">
+					Read More
+				</a>
+			</div>
+  </div>
+</div>
+
+
+  <h2>{{  }}</h2>
+  	<img src="{{ .url }}" alt="{{ portfolio.title }}">
