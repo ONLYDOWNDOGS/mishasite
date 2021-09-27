@@ -13,6 +13,8 @@ class HomePageView(generic.ListView):
 class SearchResultsView(generic.ListView):
     model = Portfolio
     template_name = 'finearts/search_results.html'
+    # Combine this with get_queryset. artstyle=1 to artstyle=q, q being attached to html form
+    # queryset = Portfolio.objects.filter(artstyle=1).order_by('-pub_date')
 
     def get_queryset(self): 
         query = self.request.GET.get('q')
