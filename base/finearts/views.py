@@ -17,6 +17,6 @@ class SearchResultsView(generic.ListView):
     def get_queryset(self): 
         query = self.request.GET.get('q')
         object_list = Portfolio.objects.filter(
-            Q(title__icontains=query)
+            Q(artstyle__icontains=query)
         )
         return object_list
