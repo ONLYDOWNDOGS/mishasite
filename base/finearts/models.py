@@ -1,5 +1,6 @@
 from django.db import models
 
+# Field Choices
 STATUS = (
     (0,"Draft"),
     (1,"Publish")
@@ -22,6 +23,7 @@ class Portfolio(models.Model):
     # image = models.FilePathField(path="/img")
     drawing = models.ImageField(upload_to='images')
     pub_date = models.DateTimeField(auto_now_add=True)
+    artstyle = models.IntegerField(choices=TECHNIQUE, default=2)
     status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:

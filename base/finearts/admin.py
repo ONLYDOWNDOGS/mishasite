@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import PortfolioPost
+from .models import Portfolio
 
-admin.site.register(PortfolioPost)
+admin.site.register(Portfolio)

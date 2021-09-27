@@ -1,0 +1,8 @@
+<h1>Search Results</h1>
+
+<ul>
+  {% for portfolio in object_list %}
+		<li>
+			{{ portfolio.title }}, {{ portfolio.description }}
+		</li>
+</ul>
