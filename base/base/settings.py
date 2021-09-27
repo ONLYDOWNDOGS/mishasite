@@ -131,7 +131,8 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/media/'
+# This path for linux, different for mac
+MEDIA_ROOT = '/home/jon/Projects/sites/mishasite/base/media'
 MEDIA_URL = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
