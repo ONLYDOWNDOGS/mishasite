@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<h1>Django Image Uploading</h1>
+<h1>Portfolio</h1>
 <ul>
   {% for portfolio in object_list %}
 	<div class="col-md-4">
@@ -11,7 +11,8 @@
 			<!--Removed line goes here!-->
 				<div class="card-body">
 					<h5 class="card-title">{{ portfolio.title }}</h5>
-					<p class="card-text">{{ project.description }}</p>
+					<img class="card-img-top" src="{% static portfolio.drawing.url %}">
+					<p class="card-text">{{ portfolio.description }}</p>
 					</a>
 				</div>
 		</div>
@@ -20,5 +21,5 @@
 </ul>
 {% endblock %}
 
-<img class="card-img-top" src="{% static portfolio.drawing %}">
+
 
