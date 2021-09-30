@@ -9,3 +9,60 @@
 {% block content %}
 
 {% endblock content %}
+
+
+<!--Oldsite's HTML to repurpose-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link href="{% static 'css/email-style.css' %}" rel="stylesheet" media="screen">
+      <title>Contact</title>
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="stretch-fit">
+        
+      </div>
+    </div>
+    <ul class="page-buttons">
+      <li class="menu-button">
+        <button type="button" class="btn btn-primary btn-lg home-button">
+          <a href="{% url 'finearts:homepage/' %}">Home</a>
+        </button>
+      </li>
+      <li class="menu-button">
+        <button type="button" class="btn btn-primary btn-lg dropdown-toggle art-button" data-toggle="dropdown">Fine Art</button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'finearts:illustrator/' %}">Graphic Design</a>
+          <a class="dropdown-item" href="{% url 'finearts:drawings/' %}">Drawing</a>
+          <a class="dropdown-item" href="{% url 'finearts:paintings/' %}">Painting</a>
+        </div>
+      </li>
+      <li class="menu-button">
+        <button type="button" class="btn btn-primary btn-lg reel-button">
+        <a href="{% url 'finearts:paintings/' %}">Reels</button>
+      </li>
+      <li class="menu-button">
+        <button type="button" class="btn btn-primary btn-lg contact-button">
+          <a href="{% url 'finearts:email/' %}">Contact Me</a>
+        </button>
+      </li>
+    </ul>
+    <div class="page-content">
+      <div class="form-container">
+        <br>
+        <form method="post" class="submission">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  </body>
+</html>

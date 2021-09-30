@@ -1,0 +1,110 @@
+body {
+    background-color: #404a57;
+}
+
+.page-buttons {
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.home-button {
+    margin-left: 100px;
+}
+
+.art-button {
+    margin-left: 175px;
+}
+
+.reel-button {
+    margin-left: 150px;
+}
+
+.contact-button {
+    margin-right: 100px;
+}
+
+.download-button {
+    margin: 0;
+}
+
+.menu-button {
+    padding: 20px;
+    margin: 5px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: #a8a9ae;
+}
+
+a:hover {
+    color: #7d3d24;
+}
+
+a:visited {
+    color: #7d3d24;
+}
+
+button:hover {
+    color: #404a57;
+}
+
+.btn {
+    color: #7d3d24;
+    background-color: #a8a9ae;
+    border-color: #a8a9ae;
+    width: 178px !important;
+}
+
+.jumbotron {
+    height: 375px;
+    background: url(Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-content {
+    display: table;
+    width: 100%;
+}
+
+.image-box {
+    display: table-cell;
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.image-box img {
+    background: white;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.image-notes {
+    display: table-cell;
+    text-align: center;
+    width: 25%;
+    height: 50%;
+    font: bolder;
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.video {
+    margin-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
