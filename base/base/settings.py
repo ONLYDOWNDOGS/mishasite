@@ -144,9 +144,9 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ANYMAIL = {
-    "MAILGUN_API_KEY": 'b8243c62d9fa127d3b3913832f73553f-f8b3d330-ed46517d',
-    "MAILGUN_SENDER_DOMAIN": "sandbox9c2446aba0f74599a310957a9494fcab.mailgun.org",
+    "MAILGUN_API_KEY": 'e52f0fb15b190d6257a5f75599e160c4-1b6eb03d-00e2c305',
+    "MAILGUN_SENDER_DOMAIN": "sandbox5a59b42ca8f04fe3a513cb64e3fc1900.mailgun.org",
 }
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"
-DEFAULT_FROM_EMAIL = "joncooke90@icloud.com"
-SERVER_EMAIL = "joncooke90@icloud.com"
+DEFAULT_FROM_EMAIL = "mishajohn@protonmail.com"
+SERVER_EMAIL = "mishajohn@protonmail.com"

@@ -2,16 +2,18 @@ from django import forms
 
 
 class ContactForm(forms.Form):
-    """ The class for the form sections accepting 
-    user input. """
-
-    your_email = forms.EmailField(
-        required=True
-    )
+    name = forms.CharField(
+        widget=forms.TextInput(
+        attrs={'placeholder': 'Name', 'style': 'width: 300px;'}))
+    from_email = forms.EmailField(
+        required=True,
+        widget=forms.EmailInput(
+        attrs={'placeholder' :'Email', 'style': 'width: 300px;'}))
     subject = forms.CharField(
-        required=True
-    )
+        required=True,
+        widget=forms.TextInput(
+        attrs={'placeholder': 'Subject', 'style': 'width: 300px;'}))
     message = forms.CharField(
-        widget=forms.Textarea,
-        required=True
-    )
+        widget=forms.Textarea(
+        attrs={'placeholder': 'Message', 'style': 'width: 500px;'}),
+        required=True)
