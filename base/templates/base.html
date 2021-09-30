@@ -24,19 +24,16 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
       <div class="container-fluid" id="mainNavBar">
-        {% block homebutton %} {% endblock homebutton %}
         <button type="button" id="sidebarCollapse" class="btn btn-info">
           <i class="fas fa-align-left"></i>
           <span>Toggle Sidebar</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          {% block urlnavbar %} {% endblock urlnavbar %}
         </div>
       </div>
     </nav>
     {% include 'toppingsnsides.html' %}
     {% block navbar %} {% endblock navbar %}
-    {% block sidebar %} {% endblock sidebar %}
     {% block sidenote %} {% endblock sidenote %}
     {% block content %}
     <!-- Content Goes here -->

@@ -3,12 +3,12 @@
 
 
 {% block style %}
-	<link href="{% static 'finearts/css/style_homepage' %}" rel="stylesheet" media="screen">
+	<link href="{% static 'finearts/css/style_homepage.css' %}" rel="stylesheet" media="screen">
 	<title>Homepage</title>
 {% endblock style %}
 
 {% block content %}
-<h1>Home</h1>
+<h1>Search Artstyles</h1>
 <form action="{% url 'search_results' %}" method="get">
 	<div>
 		<input type="radio" id="charcoal" name="q" type="text" value="0">
