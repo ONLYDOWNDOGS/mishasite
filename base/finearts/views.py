@@ -22,5 +22,5 @@ class SearchResultsView(generic.ListView):
 class ContactView(generic.TemplateView):
     template_name = 'finearts/contact.html'
 
-class ReelsView(generic.ListView):
+class ReelsView(generic.TemplateView):
     template_name = 'finearts/reels.html'
