@@ -2,23 +2,32 @@
 {% load static %}
 
 {% block content %}
-<h1>Portfolio</h1>
-<ul>
-  {% for portfolio in object_list %}
-	<div class="col-md-4">
-		<div class="card mb-2">
-																<!--Changed from portfolio.drawing.url-->
-			<!--Removed line goes here!-->
-				<div class="card-body">
-					<h5 class="card-title">{{ portfolio.title }}</h5>
-					<img class="card-img-top" src="{% static portfolio.drawing.url %}">
-					<p class="card-text">{{ portfolio.description }}</p>
-					</a>
-				</div>
-		</div>
+<h1>Home</h1>
+
+<form action="{% url 'search_results' %}" method="get">
+	<div>
+		<input type="radio" id="charcoal" name="q" type="text" value="0">
+		<label for="charcoal">CharCoal</label>
+
+		<input type="radio" id="photoshop" name="q" type="text" value="1">
+		<label for="photoshop">Photoshop</label>
+
+		<input type="radio" id="painting" name="q" type="text" value="2">
+		<label for="painting">Painting</label>
+
+		<input type="radio" id="sketching" name="q" type="text" value="4">
+		<label for="sketching">Sketching</label>
+
+		<input type="radio" id="illustrator" name="q" type="text" value="5">
+		<label for="illustrator">Illustrator</label>
+
+		<input type="radio" id="pet_portraits" name="q" type="text" value="6">
+		<label for="pet_portraits">Pet Portraits</label>
 	</div>
-  {% endfor %}
-</ul>
+	<div>
+		<button type="submit">Submit</button>
+	</div>
+</form>
 {% endblock %}
 
 

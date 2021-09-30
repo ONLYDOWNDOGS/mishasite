@@ -1,8 +1,23 @@
-<h1>Search Results</h1>
+{% extends "base.html" %}
+{% load static %}
 
-<ul>
-  {% for portfolio in object_list %}
-		<li>
-			{{ portfolio.title }}, {{ portfolio.description }}
-		</li>
-</ul>
+{% block content %}
+	<a href="{% url 'home' %}"
+		<h1>Home</h1>
+	</a>
+	<h1>Portfolio</h1>
+	<ul>
+		{% for portfolio in object_list %}
+		<div class="col-md-4">
+			<div class="card mb-2">
+					<div class="card-body">
+						<h5 class="card-title">{{ portfolio.title }}</h5>
+						<img class="card-img-top" src="{% static portfolio.drawing.url %}">
+						<p class="card-text">{{ portfolio.description }}</p>
+						</a>
+					</div>
+			</div>
+		</div>
+		{% endfor %}
+	</ul>
+{% endblock %}
