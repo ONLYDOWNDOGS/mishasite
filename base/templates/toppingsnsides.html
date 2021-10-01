@@ -7,21 +7,50 @@
 {% endblock style %}
 
 {% block navbar %}
-<header class="masthead">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class=" col-md-8 col-md-10 mx-auto">
-        <div class="site-heading">
-          <h3 class=" site-heading my-4 mt-3 text-white"> Welcome to Misha's evil lair! </h3>
-          <a href="{% url 'home' %}" class="btn btn-danger">YOU GOT ME SEARCHIN!</a>
-          <p class="text-light">My names Misha! Look at me go!! &nbsp
-          </p>
-        </div>
-      </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+  <div class="container-fluid" id="mainNavBar">
+    <form action="{% url 'search_results' %}" method="get">
+      <ul class="page-buttons">
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="charcoal" name="q" type="text" value="0">
+          <label for="charcoal">CharCoal</label>
+          </button>
+        </li>
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="photoshop" name="q" type="text" value="1">
+          <label for="photoshop">Photoshop</label>
+          </button>
+        </li>
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="painting" name="q" type="text" value="2">
+          <label for="painting">Painting</label>
+          </button>
+        </li>
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="sketching" name="q" type="text" value="4">
+          <label for="sketching">Sketching</label>
+          </button>
+        </li>
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="illustrator" name="q" type="text" value="5">
+          <label for="illustrator">Illustrator</label>
+          </button>
+        </li>
+        <li class="menu-button">
+          <button type="submit" class="btn btn-primary btn-lg home-button"
+                  id="pet_portraits" name="q" type="text" value="6">
+          <label for="pet_portraits">Pet Portraits</label>
+          </button>
+        </li>
+      </ul>
+    </form>
   </div>
-</header>
+</nav>
 {% endblock navbar %}
 
 {% block sidenote %}
@@ -39,3 +68,4 @@
 </div>
 
 {% endblock sidenote %}
+

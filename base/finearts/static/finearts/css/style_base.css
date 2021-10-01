@@ -2,6 +2,38 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
     min-height: 100vh;
+    background-color: #404a57;
+}
+
+.page-buttons {
+    display:flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+.jumbotron {
+    height: 375px;
+    background: url(img/Banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-button {
+    padding: 20px;
+    margin: 5px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    color: #7d3d24;
+    background-color: #a8a9ae;
+    border-color: #a8a9ae;
+    width: 178px !important;
 }
 
 .shadow {
