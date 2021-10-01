@@ -7,6 +7,11 @@
     box-shadow: 0 16px 48px #E3E7EB;
 }
 
+.navbar-nav > li {
+    padding-left: 125px;
+    padding-right: 100px;
+}
+
 .btn-danger {
     color: #fff;
     background-color: #f00000;
