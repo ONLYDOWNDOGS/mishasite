@@ -4,11 +4,11 @@ from django import forms
 class ContactForm(forms.Form):
     name = forms.CharField(
         widget=forms.TextInput(
-        attrs={'placeholder': 'Name', 'style': 'width: 300px;'}))
-    from_email = forms.EmailField(
+        attrs={'placeholder': 'Your Name', 'style': 'width: 300px;'}))
+    email = forms.EmailField(
         required=True,
         widget=forms.EmailInput(
-        attrs={'placeholder' :'Email', 'style': 'width: 300px;'}))
+        attrs={'placeholder' :'Your Email', 'style': 'width: 300px;'}))
     subject = forms.CharField(
         required=True,
         widget=forms.TextInput(
